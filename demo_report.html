@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AudioCheck — Professional QC Report</title>
+<style>
+:root { color-scheme: light; --ink:#19202b; --muted:#667085; --line:#e5e7eb; --bg:#f7f8fa; }
+* { box-sizing: border-box; }
+body { margin:0; font:14px/1.5 Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); }
+main { max-width:1500px; margin:0 auto; padding:32px 22px 56px; }
+header, .panel { background:#fff; border:1px solid var(--line); border-radius:14px; padding:22px; margin-bottom:18px; }
+h1 { margin:0 0 6px; font-size:28px; }
+h2 { font-size:19px; margin:0 0 14px; }
+h3 { font-size:15px; margin:0 0 10px; overflow-wrap:anywhere; }
+.muted { color:var(--muted); }
+.metrics { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:18px; }
+.metric { border:1px solid var(--line); border-radius:10px; padding:12px; }
+.metric strong { display:block; font-size:25px; }
+.badge { display:inline-block; border-radius:6px; padding:2px 7px; font-size:11px; font-weight:700; letter-spacing:.03em; }
+.PASS { color:#17663a; background:#e7f6ec; }
+.WARN { color:#855600; background:#fff2d2; }
+.FAIL { color:#9b2020; background:#fde8e8; }
+table { width:100%; border-collapse:collapse; font-size:12px; }
+th, td { border-bottom:1px solid var(--line); padding:9px 10px; text-align:left; vertical-align:top; }
+th { background:#f6f7f9; white-space:nowrap; }
+td { overflow-wrap:anywhere; }
+.table-wrap { overflow-x:auto; }
+.filename { min-width:180px; max-width:330px; overflow-wrap:anywhere; }
+.file-detail { border-top:1px solid var(--line); padding-top:16px; margin-top:20px; }
+.meter-box { background:#f8fafc; border:1px solid var(--line); border-radius:10px; padding:14px; margin:14px 0; }
+.meter-row { display:flex; align-items:center; gap:12px; margin-bottom:8px; font-size:12px; }
+.meter-label { width:140px; font-weight:600; color:var(--ink); }
+.meter-bar-track { flex:1; height:12px; background:#e2e8f0; border-radius:6px; position:relative; overflow:hidden; }
+.meter-bar-fill { height:100%; border-radius:6px; transition:width .3s ease; }
+.meter-target-zone { position:absolute; top:0; bottom:0; background:rgba(16,185,129,0.25); border-left:1px dashed #10b981; border-right:1px dashed #10b981; }
+.meter-marker { position:absolute; top:0; bottom:0; width:2px; background:#ef4444; z-index:2; }
+.phase-track .meter-center-marker { position:absolute; top:0; bottom:0; left:50%; width:2px; background:#94a3b8; z-index:1; }
+.meter-val { width:95px; text-align:right; font-weight:700; font-family:ui-monospace,Menlo,monospace; font-size:12px; }
+.remediation-box { background:#fffbeb; border-left:4px solid #f59e0b; padding:12px 16px; margin-top:14px; border-radius:0 8px 8px 0; font-size:12px; line-height:1.6; }
+.remediation-box.pass { background:#ecfdf5; border-left-color:#10b981; }
+footer { color:var(--muted); font-size:12px; margin-top:20px; }
+@media(max-width:800px) { .metrics { grid-template-columns:repeat(2,minmax(0,1fr)); } main { padding:14px; } }
+@media print {
+    body { background:#fff; }
+    main { max-width:none; padding:0; }
+    header, .panel { break-inside:avoid; border-color:#ccc; }
+    .file-detail { break-inside:avoid; }
+    .badge, .meter-bar-fill, .meter-target-zone { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+    <p class="muted">AUDIOCHECK · PROFESSIONAL AUDIO QUALITY CONTROL REPORT</p>
+    <h1>Batch Audio Quality Control Report</h1>
+    <p class="muted">Profile: <strong>Podcast &amp; Streaming (AES TD1004 / Spotify / Apple)</strong> · Generated: 2026-10-27 06:58 UTC</p>
+    <div class="metrics">
+        <div class="metric"><span class="muted">Overall Status</span><strong><span class="badge FAIL">FAIL</span></strong></div>
+        <div class="metric"><span class="muted">Files Evaluated</span><strong>5</strong></div>
+        <div class="metric"><span class="muted">Passed (PASS)</span><strong>0</strong></div>
+        <div class="metric"><span class="muted">Warnings / Fails</span><strong>1 / 4</strong></div>
+    </div>
+</header>
+<section class="panel">
+    <h2>Batch Files & Metric Summary</h2>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Status</th><th>Filename</th><th>Duration</th><th>Sample Rate</th><th>Channels</th>
+                    <th>Loudness</th><th>LRA</th><th>True Peak (BS.1770)</th><th>Sample Peak</th>
+                    <th>Crest Factor</th><th>Correlation</th><th>Edge Silence (Head / Tail)</th>
+                </tr>
+            </thead>
+            <tbody><tr><td><span class='badge WARN'>WARN</span></td><td class='filename'>01_clean_tone.wav</td><td>5 s</td><td>48000 Hz</td><td>1</td><td>-15.78 LUFS</td><td>2.12 LU</td><td>-12.03 dBTP</td><td>-12.04 dBFS</td><td>3.01 dB</td><td>Mono</td><td>0 / 0 s</td></tr><tr><td><span class='badge FAIL'>FAIL</span></td><td class='filename'>02_clipped_tone.wav</td><td>5 s</td><td>48000 Hz</td><td>1</td><td>-3.22 LUFS</td><td>2.12 LU</td><td>0.02 dBTP</td><td>0 dBFS</td><td>2.28 dB</td><td>Mono</td><td>0 / 0 s</td></tr><tr><td><span class='badge FAIL'>FAIL</span></td><td class='filename'>03_edge_silence.wav</td><td>5 s</td><td>48000 Hz</td><td>1</td><td>-19.07 LUFS</td><td>4.6 LU</td><td>-14.88 dBTP</td><td>-14.89 dBFS</td><td>4.69 dB</td><td>Mono</td><td>0.796 / 0.796 s</td></tr><tr><td><span class='badge FAIL'>FAIL</span></td><td class='filename'>04_dc_offset.wav</td><td>5 s</td><td>48000 Hz</td><td>1</td><td>-25.61 LUFS</td><td>2.12 LU</td><td>-20.43 dBTP</td><td>-20.45 dBFS</td><td>4.21 dB</td><td>Mono</td><td>0 / 0 s</td></tr><tr><td><span class='badge FAIL'>FAIL</span></td><td class='filename'>05_quiet_tone.wav</td><td>5 s</td><td>48000 Hz</td><td>1</td><td>-54.04 LUFS</td><td>2.12 LU</td><td>-50.45 dBTP</td><td>-50.46 dBFS</td><td>3.01 dB</td><td>Mono</td><td>0 / 0 s</td></tr></tbody>
+        </table>
+    </div>
+</section>
+<section class="panel">
+    <h2>File Analysis Details</h2>
+    <section class='file-detail'><h3>01_clean_tone.wav <span class='badge WARN'>WARN</span></h3>
+    <div class="meter-box">
+        <h4 style="margin:0 0 10px; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em;">Indicatori Visivi di Controllo</h4>
+        
+        <div class="meter-row">
+            <span class="meter-label">Loudness (LUFS)</span>
+            <div class="meter-bar-track">
+                <div class="meter-target-zone" style="left:51.4%; width:8.3%;"></div>
+                <div class="meter-bar-fill" style="width:56.2%; background:#10b981;"></div>
+            </div>
+            <span class="meter-val" style="color:#10b981;">-15.8 LUFS</span>
+        </div>
+        
+        <div class="meter-row">
+            <span class="meter-label">True Peak (dBTP)</span>
+            <div class="meter-bar-track">
+                <div class="meter-marker" style="left:85.2%;" title="Ceiling: -1.0 dBTP"></div>
+                <div class="meter-bar-fill" style="width:44.3%; background:#10b981;"></div>
+            </div>
+            <span class="meter-val" style="color:#10b981;">-12.03 dBTP</span>
+        </div>
+        
+    </div>
+    <table><thead><tr><th>Status</th><th>Check</th><th>Value</th><th>Details / Threshold</th></tr></thead><tbody><tr><td><span class='badge PASS'>PASS</span></td><td>Integrated Loudness</td><td>-15.8 LUFS</td><td>Target -16.0 LUFS ± 1.5 LU.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Loudness Range (LRA)</td><td>2.1 LU</td><td>Recommended ceiling 12.0 LU (EBU Tech 3342 compliant).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Max Momentary Loudness</td><td>-15.8 LUFS</td><td>Recommended ceiling -12.0 LUFS (400ms sliding window).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Max Short-Term Loudness</td><td>-15.8 LUFS</td><td>Recommended ceiling -14.0 LUFS (3.0s sliding window).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Estimated True Peak</td><td>-12.03 dBTP</td><td>Ceiling -1.0 dBTP; standard ITU-R BS.1770-4 4× polyphase FIR filter.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Digital Flat-Top Clipping (N≥3)</td><td>0 events (0 samples)</td><td>Sequences of 3 or more consecutive full-scale samples (digital DAC/ADC saturation).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Near Full-Scale Samples</td><td>0 (0.0000%)</td><td>Count of isolated samples with |x| ≥ 0.999.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Edge Silence (Head / Tail)</td><td>0.00s / 0.00s</td><td>Limit per boundary 2.00s (5ms RMS precision).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>DC Offset</td><td>-120.0 dBFS</td><td>Threshold -60.0 dBFS; channel mean.</td></tr><tr><td><span class='badge WARN'>WARN</span></td><td>Dynamic Range (Crest Factor)</td><td>3.0 dB</td><td>Peak-to-RMS level ratio; values &lt; 6 dB indicate heavy brickwall limiting or over-compression.</td></tr></tbody></table>
+            <div class="remediation-box">
+                <h4 style="margin:0 0 6px; color:#b45309; font-size:13px;">🛠️ DAW Remediation Guide (Reaper / Pro Tools / Logic / Audition)</h4>
+                <ul style="margin:0; padding-left:18px;"><li><strong>Dynamic Range (Crest Factor) [WARN]:</strong> Inspect master bus levels and processing chain for the flagged parameter.</li></ul>
+            </div>
+            <p class='muted'>Total Detected Silence: 0 s · DC Offset: -120 dBFS · Digital Flat-Top Samples (N≥3): 0 samples.</p></section><section class='file-detail'><h3>02_clipped_tone.wav <span class='badge FAIL'>FAIL</span></h3>
+    <div class="meter-box">
+        <h4 style="margin:0 0 10px; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em;">Indicatori Visivi di Controllo</h4>
+        
+        <div class="meter-row">
+            <span class="meter-label">Loudness (LUFS)</span>
+            <div class="meter-bar-track">
+                <div class="meter-target-zone" style="left:51.4%; width:8.3%;"></div>
+                <div class="meter-bar-fill" style="width:91.1%; background:#ef4444;"></div>
+            </div>
+            <span class="meter-val" style="color:#ef4444;">-3.2 LUFS</span>
+        </div>
+        
+        <div class="meter-row">
+            <span class="meter-label">True Peak (dBTP)</span>
+            <div class="meter-bar-track">
+                <div class="meter-marker" style="left:85.2%;" title="Ceiling: -1.0 dBTP"></div>
+                <div class="meter-bar-fill" style="width:89.0%; background:#ef4444;"></div>
+            </div>
+            <span class="meter-val" style="color:#ef4444;">0.02 dBTP</span>
+        </div>
+        
+    </div>
+    <table><thead><tr><th>Status</th><th>Check</th><th>Value</th><th>Details / Threshold</th></tr></thead><tbody><tr><td><span class='badge FAIL'>FAIL</span></td><td>Integrated Loudness</td><td>-3.2 LUFS</td><td>Target -16.0 LUFS ± 1.5 LU.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Loudness Range (LRA)</td><td>2.1 LU</td><td>Recommended ceiling 12.0 LU (EBU Tech 3342 compliant).</td></tr><tr><td><span class='badge WARN'>WARN</span></td><td>Max Momentary Loudness</td><td>-3.2 LUFS</td><td>Recommended ceiling -12.0 LUFS (400ms sliding window).</td></tr><tr><td><span class='badge WARN'>WARN</span></td><td>Max Short-Term Loudness</td><td>-3.2 LUFS</td><td>Recommended ceiling -14.0 LUFS (3.0s sliding window).</td></tr><tr><td><span class='badge FAIL'>FAIL</span></td><td>Estimated True Peak</td><td>0.02 dBTP</td><td>Ceiling -1.0 dBTP; standard ITU-R BS.1770-4 4× polyphase FIR filter.</td></tr><tr><td><span class='badge FAIL'>FAIL</span></td><td>Digital Flat-Top Clipping (N≥3)</td><td>2200 events (79000 samples)</td><td>Sequences of 3 or more consecutive full-scale samples (digital DAC/ADC saturation).</td></tr><tr><td><span class='badge WARN'>WARN</span></td><td>Near Full-Scale Samples</td><td>79000 (32.9167%)</td><td>Count of isolated samples with |x| ≥ 0.999.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Edge Silence (Head / Tail)</td><td>0.00s / 0.00s</td><td>Limit per boundary 2.00s (5ms RMS precision).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>DC Offset</td><td>-96.4 dBFS</td><td>Threshold -60.0 dBFS; channel mean.</td></tr><tr><td><span class='badge WARN'>WARN</span></td><td>Dynamic Range (Crest Factor)</td><td>2.3 dB</td><td>Peak-to-RMS level ratio; values &lt; 6 dB indicate heavy brickwall limiting or over-compression.</td></tr></tbody></table>
+            <div class="remediation-box">
+                <h4 style="margin:0 0 6px; color:#b45309; font-size:13px;">🛠️ DAW Remediation Guide (Reaper / Pro Tools / Logic / Audition)</h4>
+                <ul style="margin:0; padding-left:18px;"><li><strong>Integrated Loudness [FAIL]:</strong> Adjust output gain or limiter threshold on the master bus to match the delivery target. In Reaper, Pro Tools, Logic, or Audition, use an ITU-R BS.1770 / EBU R128 compliant meter (e.g., Youlean, FabFilter Pro-L 2, WLM) to calibrate integrated loudness.</li><li><strong>Max Momentary Loudness [WARN]:</strong> Short-term loudness peaks exceed the prescribed threshold. Use a fast-response peak limiter/compressor on transients (fast attack, 50-100 ms release) or apply Clip Gain / Volume Automation on high-energy passages.</li><li><strong>Max Short-Term Loudness [WARN]:</strong> Short-term loudness peaks exceed the prescribed threshold. Use a fast-response peak limiter/compressor on transients (fast attack, 50-100 ms release) or apply Clip Gain / Volume Automation on high-energy passages.</li><li><strong>Estimated True Peak [FAIL]:</strong> Enable True Peak Limiting (with 4x or 8x inter-sample oversampling) on your final master limiter. Set the ceiling to -1.0 dBTP (or -2.0 dBTP for lossy MP3/AAC distribution) to prevent inter-sample clipping during D/A conversion.</li><li><strong>Digital Flat-Top Clipping (N≥3) [FAIL]:</strong> Consecutive flat full-scale samples detected. Reduce pre-gain to prevent digital bus clipping. If distortion occurred during tracking, apply a de-clip module (e.g., iZotope RX) to reconstruct waveform peaks.</li><li><strong>Near Full-Scale Samples [WARN]:</strong> Inspect master bus levels and processing chain for the flagged parameter.</li><li><strong>Dynamic Range (Crest Factor) [WARN]:</strong> Inspect master bus levels and processing chain for the flagged parameter.</li></ul>
+            </div>
+            <p class='muted'>Total Detected Silence: 0 s · DC Offset: -96.35 dBFS · Digital Flat-Top Samples (N≥3): 79000 samples.</p></section><section class='file-detail'><h3>03_edge_silence.wav <span class='badge FAIL'>FAIL</span></h3>
+    <div class="meter-box">
+        <h4 style="margin:0 0 10px; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em;">Indicatori Visivi di Controllo</h4>
+        
+        <div class="meter-row">
+            <span class="meter-label">Loudness (LUFS)</span>
+            <div class="meter-bar-track">
+                <div class="meter-target-zone" style="left:51.4%; width:8.3%;"></div>
+                <div class="meter-bar-fill" style="width:47.0%; background:#ef4444;"></div>
+            </div>
+            <span class="meter-val" style="color:#ef4444;">-19.1 LUFS</span>
+        </div>
+        
+        <div class="meter-row">
+            <span class="meter-label">True Peak (dBTP)</span>
+            <div class="meter-bar-track">
+                <div class="meter-marker" style="left:85.2%;" title="Ceiling: -1.0 dBTP"></div>
+                <div class="meter-bar-fill" style="width:33.8%; background:#10b981;"></div>
+            </div>
+            <span class="meter-val" style="color:#10b981;">-14.88 dBTP</span>
+        </div>
+        
+    </div>
+    <table><thead><tr><th>Status</th><th>Check</th><th>Value</th><th>Details / Threshold</th></tr></thead><tbody><tr><td><span class='badge FAIL'>FAIL</span></td><td>Integrated Loudness</td><td>-19.1 LUFS</td><td>Target -16.0 LUFS ± 1.5 LU.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Loudness Range (LRA)</td><td>4.6 LU</td><td>Recommended ceiling 12.0 LU (EBU Tech 3342 compliant).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Max Momentary Loudness</td><td>-18.7 LUFS</td><td>Recommended ceiling -12.0 LUFS (400ms sliding window).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Max Short-Term Loudness</td><td>-18.7 LUFS</td><td>Recommended ceiling -14.0 LUFS (3.0s sliding window).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Estimated True Peak</td><td>-14.88 dBTP</td><td>Ceiling -1.0 dBTP; standard ITU-R BS.1770-4 4× polyphase FIR filter.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Digital Flat-Top Clipping (N≥3)</td><td>0 events (0 samples)</td><td>Sequences of 3 or more consecutive full-scale samples (digital DAC/ADC saturation).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Near Full-Scale Samples</td><td>0 (0.0000%)</td><td>Count of isolated samples with |x| ≥ 0.999.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Edge Silence (Head / Tail)</td><td>0.80s / 0.80s</td><td>Limit per boundary 2.00s (5ms RMS precision).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>DC Offset</td><td>-120.0 dBFS</td><td>Threshold -60.0 dBFS; channel mean.</td></tr><tr><td><span class='badge WARN'>WARN</span></td><td>Dynamic Range (Crest Factor)</td><td>4.7 dB</td><td>Peak-to-RMS level ratio; values &lt; 6 dB indicate heavy brickwall limiting or over-compression.</td></tr></tbody></table>
+            <div class="remediation-box">
+                <h4 style="margin:0 0 6px; color:#b45309; font-size:13px;">🛠️ DAW Remediation Guide (Reaper / Pro Tools / Logic / Audition)</h4>
+                <ul style="margin:0; padding-left:18px;"><li><strong>Integrated Loudness [FAIL]:</strong> Adjust output gain or limiter threshold on the master bus to match the delivery target. In Reaper, Pro Tools, Logic, or Audition, use an ITU-R BS.1770 / EBU R128 compliant meter (e.g., Youlean, FabFilter Pro-L 2, WLM) to calibrate integrated loudness.</li><li><strong>Dynamic Range (Crest Factor) [WARN]:</strong> Inspect master bus levels and processing chain for the flagged parameter.</li></ul>
+            </div>
+            <p class='muted'>Total Detected Silence: 1.6 s · DC Offset: -120 dBFS · Digital Flat-Top Samples (N≥3): 0 samples.</p></section><section class='file-detail'><h3>04_dc_offset.wav <span class='badge FAIL'>FAIL</span></h3>
+    <div class="meter-box">
+        <h4 style="margin:0 0 10px; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em;">Indicatori Visivi di Controllo</h4>
+        
+        <div class="meter-row">
+            <span class="meter-label">Loudness (LUFS)</span>
+            <div class="meter-bar-track">
+                <div class="meter-target-zone" style="left:51.4%; width:8.3%;"></div>
+                <div class="meter-bar-fill" style="width:28.9%; background:#ef4444;"></div>
+            </div>
+            <span class="meter-val" style="color:#ef4444;">-25.6 LUFS</span>
+        </div>
+        
+        <div class="meter-row">
+            <span class="meter-label">True Peak (dBTP)</span>
+            <div class="meter-bar-track">
+                <div class="meter-marker" style="left:85.2%;" title="Ceiling: -1.0 dBTP"></div>
+                <div class="meter-bar-fill" style="width:13.2%; background:#10b981;"></div>
+            </div>
+            <span class="meter-val" style="color:#10b981;">-20.43 dBTP</span>
+        </div>
+        
+    </div>
+    <table><thead><tr><th>Status</th><th>Check</th><th>Value</th><th>Details / Threshold</th></tr></thead><tbody><tr><td><span class='badge FAIL'>FAIL</span></td><td>Integrated Loudness</td><td>-25.6 LUFS</td><td>Target -16.0 LUFS ± 1.5 LU.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Loudness Range (LRA)</td><td>2.1 LU</td><td>Recommended ceiling 12.0 LU (EBU Tech 3342 compliant).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Max Momentary Loudness</td><td>-25.6 LUFS</td><td>Recommended ceiling -12.0 LUFS (400ms sliding window).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Max Short-Term Loudness</td><td>-25.6 LUFS</td><td>Recommended ceiling -14.0 LUFS (3.0s sliding window).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Estimated True Peak</td><td>-20.43 dBTP</td><td>Ceiling -1.0 dBTP; standard ITU-R BS.1770-4 4× polyphase FIR filter.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Digital Flat-Top Clipping (N≥3)</td><td>0 events (0 samples)</td><td>Sequences of 3 or more consecutive full-scale samples (digital DAC/ADC saturation).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Near Full-Scale Samples</td><td>0 (0.0000%)</td><td>Count of isolated samples with |x| ≥ 0.999.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Edge Silence (Head / Tail)</td><td>0.00s / 0.00s</td><td>Limit per boundary 2.00s (5ms RMS precision).</td></tr><tr><td><span class='badge WARN'>WARN</span></td><td>DC Offset</td><td>-36.5 dBFS</td><td>Threshold -60.0 dBFS; channel mean.</td></tr><tr><td><span class='badge WARN'>WARN</span></td><td>Dynamic Range (Crest Factor)</td><td>4.2 dB</td><td>Peak-to-RMS level ratio; values &lt; 6 dB indicate heavy brickwall limiting or over-compression.</td></tr></tbody></table>
+            <div class="remediation-box">
+                <h4 style="margin:0 0 6px; color:#b45309; font-size:13px;">🛠️ DAW Remediation Guide (Reaper / Pro Tools / Logic / Audition)</h4>
+                <ul style="margin:0; padding-left:18px;"><li><strong>Integrated Loudness [FAIL]:</strong> Adjust output gain or limiter threshold on the master bus to match the delivery target. In Reaper, Pro Tools, Logic, or Audition, use an ITU-R BS.1770 / EBU R128 compliant meter (e.g., Youlean, FabFilter Pro-L 2, WLM) to calibrate integrated loudness.</li><li><strong>DC Offset [WARN]:</strong> Engage a high-pass filter (15-20 Hz, 18-24 dB/oct) on the master chain to eliminate DC bias and recover digital headroom.</li><li><strong>Dynamic Range (Crest Factor) [WARN]:</strong> Inspect master bus levels and processing chain for the flagged parameter.</li></ul>
+            </div>
+            <p class='muted'>Total Detected Silence: 0 s · DC Offset: -36.48 dBFS · Digital Flat-Top Samples (N≥3): 0 samples.</p></section><section class='file-detail'><h3>05_quiet_tone.wav <span class='badge FAIL'>FAIL</span></h3>
+    <div class="meter-box">
+        <h4 style="margin:0 0 10px; font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:0.04em;">Indicatori Visivi di Controllo</h4>
+        
+        <div class="meter-row">
+            <span class="meter-label">Loudness (LUFS)</span>
+            <div class="meter-bar-track">
+                <div class="meter-target-zone" style="left:51.4%; width:8.3%;"></div>
+                <div class="meter-bar-fill" style="width:0.0%; background:#ef4444;"></div>
+            </div>
+            <span class="meter-val" style="color:#ef4444;">-54.0 LUFS</span>
+        </div>
+        
+        <div class="meter-row">
+            <span class="meter-label">True Peak (dBTP)</span>
+            <div class="meter-bar-track">
+                <div class="meter-marker" style="left:85.2%;" title="Ceiling: -1.0 dBTP"></div>
+                <div class="meter-bar-fill" style="width:0.0%; background:#10b981;"></div>
+            </div>
+            <span class="meter-val" style="color:#10b981;">-50.45 dBTP</span>
+        </div>
+        
+    </div>
+    <table><thead><tr><th>Status</th><th>Check</th><th>Value</th><th>Details / Threshold</th></tr></thead><tbody><tr><td><span class='badge FAIL'>FAIL</span></td><td>Integrated Loudness</td><td>-54.0 LUFS</td><td>Target -16.0 LUFS ± 1.5 LU.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Loudness Range (LRA)</td><td>2.1 LU</td><td>Recommended ceiling 12.0 LU (EBU Tech 3342 compliant).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Max Momentary Loudness</td><td>-54.0 LUFS</td><td>Recommended ceiling -12.0 LUFS (400ms sliding window).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Max Short-Term Loudness</td><td>-54.0 LUFS</td><td>Recommended ceiling -14.0 LUFS (3.0s sliding window).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Estimated True Peak</td><td>-50.45 dBTP</td><td>Ceiling -1.0 dBTP; standard ITU-R BS.1770-4 4× polyphase FIR filter.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Digital Flat-Top Clipping (N≥3)</td><td>0 events (0 samples)</td><td>Sequences of 3 or more consecutive full-scale samples (digital DAC/ADC saturation).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Near Full-Scale Samples</td><td>0 (0.0000%)</td><td>Count of isolated samples with |x| ≥ 0.999.</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>Edge Silence (Head / Tail)</td><td>0.00s / 0.00s</td><td>Limit per boundary 2.00s (5ms RMS precision).</td></tr><tr><td><span class='badge PASS'>PASS</span></td><td>DC Offset</td><td>-120.0 dBFS</td><td>Threshold -60.0 dBFS; channel mean.</td></tr><tr><td><span class='badge WARN'>WARN</span></td><td>Dynamic Range (Crest Factor)</td><td>3.0 dB</td><td>Peak-to-RMS level ratio; values &lt; 6 dB indicate heavy brickwall limiting or over-compression.</td></tr></tbody></table>
+            <div class="remediation-box">
+                <h4 style="margin:0 0 6px; color:#b45309; font-size:13px;">🛠️ DAW Remediation Guide (Reaper / Pro Tools / Logic / Audition)</h4>
+                <ul style="margin:0; padding-left:18px;"><li><strong>Integrated Loudness [FAIL]:</strong> Adjust output gain or limiter threshold on the master bus to match the delivery target. In Reaper, Pro Tools, Logic, or Audition, use an ITU-R BS.1770 / EBU R128 compliant meter (e.g., Youlean, FabFilter Pro-L 2, WLM) to calibrate integrated loudness.</li><li><strong>Dynamic Range (Crest Factor) [WARN]:</strong> Inspect master bus levels and processing chain for the flagged parameter.</li></ul>
+            </div>
+            <p class='muted'>Total Detected Silence: 0 s · DC Offset: -120 dBFS · Digital Flat-Top Samples (N≥3): 0 samples.</p></section>
+</section>
+<section class="panel">
+    <h2>QC Profile Specifications</h2>
+    <div class="table-wrap">
+        <table>
+            <thead><tr><th>Control Parameter</th><th>Target / Boundary Threshold</th></tr></thead>
+            <tbody><tr><td>Target Loudness (LUFS)</td><td>-16.0</td></tr><tr><td>Loudness Tolerance (LU)</td><td>1.5</td></tr><tr><td>Estimated True Peak Ceiling (dBTP)</td><td>-1.0</td></tr><tr><td>Max Loudness Range (LRA in LU)</td><td>12.0</td></tr><tr><td>Max Momentary Loudness (LUFS)</td><td>-12.0</td></tr><tr><td>Max Short-Term Loudness (LUFS)</td><td>-14.0</td></tr><tr><td>Min Stereo Phase Correlation</td><td>0.1</td></tr><tr><td>Max Mono Fold-Down Attenuation (dB)</td><td>3.5</td></tr><tr><td>Flat-Top Clipping Sample Tolerance</td><td>0</td></tr><tr><td>Max Boundary Silence per Edge (s)</td><td>2.0</td></tr><tr><td>DC Offset Limit (dBFS)</td><td>-60.0</td></tr><tr><td>Silence Threshold (dBFS)</td><td>-60.0</td></tr><tr><td>Min Silence Region Duration (s)</td><td>0.25</td></tr><tr><td>Full-Scale Sample Threshold</td><td>0.999</td></tr><tr><td>Oversampling Factor (ITU-R BS.1770-4)</td><td>4</td></tr></tbody>
+        </table>
+    </div>
+</section>
+
+<footer>
+    <p>AudioCheck · Conforming to ITU-R BS.1770-4, EBU R128 and AES TD1004 engineering standards. True peak estimated via 4-phase 48-tap polyphase FIR filter; stereo phase check includes Pearson correlation and mono fold-down cancellation.</p>
+    <p>To archive a PDF copy: Open in browser and select Print → Save as PDF.</p>
+</footer>
+</main>
+</body>
+</html>

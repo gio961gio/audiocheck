@@ -4,7 +4,7 @@
 [![Python 3.10 | 3.11 | 3.12](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Standards: ITU--R BS.1770--4 | EBU R128 | AES TD1004](https://img.shields.io/badge/Standards-ITU--R%20BS.1770--4%20%7C%20EBU%20R128%20%7C%20AES%20TD1004-emerald)](#supported-audio-standards)
-[![Live Demo](https://img.shields.io/badge/Streamlit_Cloud-Live_Demo-FF4B4B?logo=streamlit&logoColor=white)](https://audiocheck.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/Streamlit_Cloud-Live_Demo-FF4B4B?logo=streamlit&logoColor=white)](https://audiocheck-engine.streamlit.app)
 
 **AudioCheck** is an automated, broadcast-grade audio quality control (AQC) and metrological compliance engine. Engineered for post-production facilities, podcast networks, mastering engineers, and audio publishers (ACX / Audible), it validates multi-stem deliverables against international broadcast regulations and streaming distribution targets.
 
@@ -14,7 +14,7 @@ Developed by **Giovanni Antonecchia** (*Music Engineering, Politecnico di Milano
 > **Proprietary DSP Engine & Academic Evaluation**  
 > AudioCheck's core DSP algorithms (ITU-R BS.1770-4 48-tap polyphase FIR filter, dual-stage EBU R128 loudness gating, and concurrent batch pipeline) are protected intellectual property.  
 > 
-> You can **test the engine live with your own audio files** via the **[Interactive Web Demo](https://audiocheck.streamlit.app)** or request full source code access for institutional and academic evaluation by contacting [Giovanni Antonecchia](mailto:gio.antonecchia961@gmail.com).
+> You can **test the engine live with your own audio files** via the **[Interactive Web Demo](https://audiocheck-engine.streamlit.app)** or request full source code access for institutional and academic evaluation by contacting [Giovanni Antonecchia](mailto:gio.antonecchia961@gmail.com).
 
 ---
 

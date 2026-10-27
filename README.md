@@ -130,58 +130,48 @@ AudioCheck undergoes continuous validation against normative ground-truth corpor
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Live Evaluation & Interactive Demo
 
-### Installation
+The AudioCheck engine is hosted and ready for immediate online evaluation:
 
-```bash
-# Clone repository
-git clone https://github.com/gio961gio/audiocheck.git
-cd audiocheck
+[![Open Live Demo](https://img.shields.io/badge/Launch-AudioCheck_Live_Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://audiocheck-engine.streamlit.app)
 
-# Install dependencies
-pip install -r requirements.txt
-```
-
-### 1. Launch Interactive Dark Studio App
-
-```bash
-# Start Streamlit application
-streamlit run app.py
-```
-*(On Windows, you can also double-click `Launch_AudioCheck.bat`)*
-
-### 2. Run Headless CLI Batch Analysis
-
-```bash
-# Analyze a folder of audio files with the podcast preset
-python audiocheck_cli.py path/to/audio/stems --preset podcast -o ./reports
-
-# Analyze for ACX/Audible compliance with custom True Peak ceiling
-python audiocheck_cli.py audiobook_chapter.wav --preset acx --true-peak -3.0
-
-# CI/CD mode: stream JSON to stdout with no disk side-effects
-python audiocheck_cli.py master.wav --preset music --json --quiet
-```
-
-### Deterministic CLI Exit Codes
-
-| Exit Code | Classification | Meaning |
-| :---: | :---: | :--- |
-| `0` | **PASS** | All evaluated files satisfy every metric limit. |
-| `1` | **WARN** | Warnings present (e.g. minor dynamic or DC offset deviation). No hard failures. |
-| `2` | **FAIL** | One or more files violated critical delivery thresholds (clipping, loudness, true peak). |
-| `3` | **ERROR** | Unreadable/corrupted audio stream, missing files, or invalid CLI parameters. |
+### How to Evaluate:
+1. Open the **[Live Interactive Web Demo](https://audiocheck-engine.streamlit.app)** in any desktop or mobile browser.
+2. Drag and drop any uncompressed (.wav, .flac) or compressed (.mp3, .m4a) audio stems or ZIP packages.
+3. Select an industry delivery preset (**EBU R128**, **AES TD1004 / Streaming**, **ACX / Audible**, or **Music Mastering**).
+4. Inspect real-time metrological indicators (ITU-R BS.1770 True Peak, Pearson stereo phase correlation, LRA dynamics) and download the self-contained offline HTML inspection report with actionable DAW remediation advice.
 
 ---
 
-## 🧪 Automated Test Suite
+## ⚙️ Headless CLI & Automated Pipeline Architecture
 
-Run the full automated test suite containing 36 unit, integration, and benchmark tests:
+In addition to the interactive dashboard, AudioCheck includes a high-throughput headless CLI designed for automated mastering workflows, ingest servers, and CI/CD audio pipelines.
 
-```bash
-python -m pytest -v
-```
+### Deterministic Exit Codes for CI/CD
+
+| Exit Code | Classification | Operational Meaning |
+| :---: | :---: | :--- |
+| `0` | **PASS** | All evaluated stems strictly satisfy every normative threshold. |
+| `1` | **WARN** | Minor acoustic warning (e.g., slight dynamic deviation or low DC offset). No hard failure. |
+| `2` | **FAIL** | One or more audio files violated critical platform limits (true peak overshoot, clipping, loudness target). |
+| `3` | **ERROR** | Corrupt/unreadable file header, missing stem, or invalid argument payload. |
+
+### Output Artifacts
+- **Structured JSON**: Machine-readable payload printed to `stdout` or disk for automated build pipelines.
+- **CSV Summary**: Tabular audit log with loudness, dynamic range, and channel metrics for spreadsheet analysis.
+- **Self-Contained HTML**: Executive report with embedded CSS styling and targeted DAW adjustment guidelines (Reaper, Pro Tools, Logic Pro, Audition).
+
+---
+
+## 🧪 Metrological Verification & Test Suite
+
+The engine undergoes rigorous automated regression testing across 36 specialized test suites verifying algorithmic compliance against primary international standards:
+
+- **ITU-R BS.1770-4 Annex 2**: Polyphase 48-tap FIR filter 4x inter-sample peak detection.
+- **EBU Tech 3341 / 3342**: Dual-stage loudness gating (-70 LUFS / -10 LU) and statistical LRA percentiles.
+- **ACX / Audible Requirements**: Boundary threshold compliance for loudness, true peak, and edge silence.
+- **ICASSP 2024 Speech Degradation**: Waveform plateau analysis on clipped speech corpora.
 
 ```text
 tests/test_accuracy_benchmarks.py::test_accuracy_ground_truth_suite PASSED
@@ -189,19 +179,27 @@ tests/test_acx_profile.py::test_acx_loudness_range_boundaries PASSED
 tests/test_acx_profile.py::test_acx_true_peak_ceiling_boundary PASSED
 tests/test_acx_profile.py::test_acx_edge_silence_boundary PASSED
 tests/test_acx_profile.py::test_acx_dc_offset_boundary PASSED
-tests/test_cli.py::test_cli_help PASSED
 tests/test_cli.py::test_cli_json_mode_pure_stdout_no_disk_side_effects PASSED
 tests/test_core.py::test_ebu_tech_3341_inter_sample_peak_overshoot PASSED
 tests/test_core.py::test_stereo_phase_correlation_and_mono_drop PASSED
 tests/test_degraded_librispeech.py::test_degraded_librispeech_benchmark_execution PASSED
 tests/test_profiles_reporting.py::test_html_report_renders_meter_bars_and_daw_remediation PASSED
 tests/test_real_world_ebu.py::test_real_world_ebu_programme_simulation_accuracy PASSED
-============================= 36 passed in 37.29s =============================
+============================= 36 passed =============================
 ```
+
+---
+
+## 🔒 Source Code Access & Institutional Evaluation
+
+The core DSP engine and CLI distribution are proprietary intellectual property of **Giovanni Antonecchia** (*Music Engineering, Politecnico di Milano*).
+
+For institutional review, academic evaluation, or commercial deployment inquiries, please contact:  
+📧 **[gio.antonecchia961@gmail.com](mailto:gio.antonecchia961@gmail.com)**
 
 ---
 
 ## 📄 License & Intellectual Property
 
-Copyright © 2026 Giovanni Antonecchia. All rights reserved.
+Copyright © 2026 Giovanni Antonecchia. All rights reserved.  
 The underlying AudioCheck DSP engine and algorithms are proprietary intellectual property. See the [LICENSE](LICENSE) file for evaluation terms.

@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+*.diff
+scratch_*
+audiocheck_report.*
+datasets/**/*.wav
+datasets/*.zip
+datasets/**/*.zip
+datasets/*.bin
+datasets/**/*.bin
+ci_artifacts/
+
+

@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/gio961gio/audiocheck/actions/workflows/ci.yml/badge.svg)](https://github.com/gio961gio/audiocheck/actions/workflows/ci.yml)
 [![Python 3.10 | 3.11 | 3.12](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red.svg)](LICENSE)
 [![Standards: ITU--R BS.1770--4 | EBU R128 | AES TD1004](https://img.shields.io/badge/Standards-ITU--R%20BS.1770--4%20%7C%20EBU%20R128%20%7C%20AES%20TD1004-emerald)](#supported-audio-standards)
 [![Live Demo](https://img.shields.io/badge/Streamlit_Cloud-Live_Demo-FF4B4B?logo=streamlit&logoColor=white)](https://audiocheck-engine.streamlit.app)
 
@@ -201,6 +201,7 @@ tests/test_real_world_ebu.py::test_real_world_ebu_programme_simulation_accuracy 
 
 ---
 
-## 📄 License
+## 📄 License & Intellectual Property
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+Copyright © 2026 Giovanni Antonecchia. All rights reserved.
+The underlying AudioCheck DSP engine and algorithms are proprietary intellectual property. See the [LICENSE](LICENSE) file for evaluation terms.

@@ -1,0 +1,256 @@
+{
+  "seq_3341_1000hz_23lufs.wav": {
+    "description": "EBU Tech 3341 Seq 1: 1kHz in-phase stereo sine wave",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 10.0,
+    "metrics": {
+      "integrated_lufs": {
+        "target": -23.0,
+        "tolerance": 0.1,
+        "unit": "LUFS"
+      },
+      "momentary_max_lufs": {
+        "target": -23.0,
+        "tolerance": 0.1,
+        "unit": "LUFS"
+      },
+      "short_term_max_lufs": {
+        "target": -23.0,
+        "tolerance": 0.1,
+        "unit": "LUFS"
+      },
+      "estimated_true_peak_dbtp": {
+        "target": -22.96,
+        "tolerance": 0.1,
+        "unit": "dBTP"
+      },
+      "sample_peak_dbfs": {
+        "target": -22.97,
+        "tolerance": 0.05,
+        "unit": "dBFS"
+      },
+      "stereo_correlation_avg": {
+        "target": 1.0,
+        "tolerance": 0.01,
+        "unit": ""
+      },
+      "mono_drop_db": {
+        "target": 0.0,
+        "tolerance": 0.05,
+        "unit": "dB"
+      },
+      "flat_top_samples": {
+        "target": 0,
+        "tolerance": 0,
+        "unit": "samples"
+      }
+    }
+  },
+  "seq_3341_1000hz_33lufs.wav": {
+    "description": "EBU Tech 3341 Seq 2: 1kHz stereo sine wave at -33 LUFS (20s)",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 20.0,
+    "metrics": {
+      "integrated_lufs": {
+        "target": -33.0,
+        "tolerance": 0.1,
+        "unit": "LUFS"
+      },
+      "loudness_range_lu": {
+        "target": 0.0,
+        "tolerance": 0.1,
+        "unit": "LU"
+      },
+      "estimated_true_peak_dbtp": {
+        "target": -32.96,
+        "tolerance": 0.1,
+        "unit": "dBTP"
+      },
+      "stereo_correlation_avg": {
+        "target": 1.0,
+        "tolerance": 0.01,
+        "unit": ""
+      }
+    }
+  },
+  "seq_3341_true_peak_overshoot.wav": {
+    "description": "EBU Tech 3341 Inter-sample Peak test signal (fs/4 at pi/4)",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 5.0,
+    "metrics": {
+      "sample_peak_dbfs": {
+        "target": 0.0,
+        "tolerance": 0.02,
+        "unit": "dBFS"
+      },
+      "estimated_true_peak_dbtp": {
+        "target": 3.01,
+        "tolerance": 0.15,
+        "unit": "dBTP"
+      }
+    }
+  },
+  "seq_3341_gated_loudness.wav": {
+    "description": "EBU Tech 3341 Gated Loudness test (3 segments: -30, -75, -20 LUFS)",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 30.0,
+    "metrics": {
+      "integrated_lufs": {
+        "target": -20.07,
+        "tolerance": 0.1,
+        "unit": "LUFS"
+      }
+    }
+  },
+  "seq_3342_lra_10lu.wav": {
+    "description": "EBU Tech 3342 Controlled Loudness Range (LRA) sequence",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 24.0,
+    "metrics": {
+      "integrated_lufs": {
+        "target": -25.62,
+        "tolerance": 0.2,
+        "unit": "LUFS"
+      },
+      "loudness_range_lu": {
+        "target": 10.18,
+        "tolerance": 0.2,
+        "unit": "LU"
+      }
+    }
+  },
+  "seq_phase_stereo_quadrature.wav": {
+    "description": "Stereo phase quadrature (90 deg shift: corr=0.00, mono drop=3.01 dB)",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 4.0,
+    "metrics": {
+      "stereo_correlation_avg": {
+        "target": 0.0,
+        "tolerance": 0.01,
+        "unit": ""
+      },
+      "mono_drop_db": {
+        "target": 3.01,
+        "tolerance": 0.05,
+        "unit": "dB"
+      }
+    }
+  },
+  "seq_phase_stereo_antiphase.wav": {
+    "description": "Stereo anti-phase (180 deg inversion: corr=-1.00, total mono cancel)",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 4.0,
+    "metrics": {
+      "stereo_correlation_avg": {
+        "target": -1.0,
+        "tolerance": 0.01,
+        "unit": ""
+      },
+      "mono_drop_db": {
+        "target": 60.0,
+        "tolerance": 0.5,
+        "unit": "dB"
+      }
+    }
+  },
+  "seq_flattop_clipping_50samples.wav": {
+    "description": "Flat-top digital clipping with exactly 50 consecutive full-scale samples",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 3.0,
+    "metrics": {
+      "flat_top_samples": {
+        "target": 50,
+        "tolerance": 0,
+        "unit": "samples"
+      }
+    }
+  },
+  "seq_edge_silence_precise.wav": {
+    "description": "Calibrated boundary silence (0.500s leading, 1.200s trailing)",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 3.7,
+    "metrics": {
+      "leading_silence_s": {
+        "target": 0.496,
+        "tolerance": 0.008,
+        "unit": "s"
+      },
+      "trailing_silence_s": {
+        "target": 1.196,
+        "tolerance": 0.008,
+        "unit": "s"
+      }
+    }
+  },
+  "seq_dc_offset_minus40dbfs.wav": {
+    "description": "Calibrated DC offset (+0.0100 linear -> -40.00 dBFS)",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 3.0,
+    "metrics": {
+      "dc_offset_dbfs": {
+        "target": -40.0,
+        "tolerance": 0.1,
+        "unit": "dBFS"
+      }
+    }
+  },
+  "seq_speech_formants_cadence.wav": {
+    "description": "Speech acoustic simulation with dynamic vocal formants and 400ms pause",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 6.0,
+    "metrics": {
+      "integrated_lufs": {
+        "target": -22.13,
+        "tolerance": 0.15,
+        "unit": "LUFS"
+      },
+      "crest_factor_db": {
+        "target": 7.37,
+        "tolerance": 0.15,
+        "unit": "dB"
+      }
+    }
+  },
+  "seq_multirate_96k_highres.wav": {
+    "description": "High-resolution 96 kHz 24-bit test sequence",
+    "sample_rate_hz": 96000,
+    "channels": 2,
+    "duration_s": 3.0,
+    "metrics": {
+      "sample_rate_hz": {
+        "target": 96000,
+        "tolerance": 0,
+        "unit": "Hz"
+      },
+      "integrated_lufs": {
+        "target": -23.0,
+        "tolerance": 0.15,
+        "unit": "LUFS"
+      }
+    }
+  },
+  "seq_subframe_short_burst_250ms.wav": {
+    "description": "Sub-frame 250ms short burst (< 400ms momentary window)",
+    "sample_rate_hz": 48000,
+    "channels": 2,
+    "duration_s": 0.25,
+    "metrics": {
+      "duration_s": {
+        "target": 0.25,
+        "tolerance": 0.005,
+        "unit": "s"
+      }
+    }
+  }
+}

@@ -1,0 +1,407 @@
+{
+  "clean_3830-12531-0011.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "a5a151312a2a7f11ddc18ae5b78117c5a47f9bda59c794f0032d44a0c6f381a7",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0013.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "d63d15c350d8b4fd106ad1d210a7b5e35e578e1319f609e783af5ddf4a44621a",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0023.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "b5129b4f5e205063b475101ba673e190460cd3f9532143af44d3a3acb3cff00c",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0022.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "3baded4224bc493412857ddf7f62326771731edc1bc41aa14afd5864a1d5a14a",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0024.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "9889a6df84a63ed6b52bf8c4a10eac6490bacebb1f611bd853b0c5b4f401cb6e",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0005.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "ecdf68b12d9d85b46b7d290de6f87c1c4041a372345dc09749a6f1da59a55e5c",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0029.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "458db4fc0abf8df21fb36a7f368da60436318f95744c02342bcc8ea55e59494e",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0007.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "6026ab5c203097c71fbad6502a96c639fbde7f17d558423e2511ff711168e29d",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0019.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "1b595147bd52848ae860271223f9c3b76a6e4f180b0c95d4a6e02f02d861756b",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0004.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "a9496ae473e5dc97bc12da00990e5f6c48c94e3eb593918ea325bc86b435bee1",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0025.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "f45c8897520decb530353b45b979d3c22886775749372ee4bac35fa34f9c27a0",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0006.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "2d7708067f2eea142d21acc7189a4f57891ef4f6bd64cddae25a141de85de4eb",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0001.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "2a57507a33a3a6f6efc3241410466f6438c0f13407f214946046d3fb0e2addd6",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0009.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "1a3950660c03b93f86fc7f0ffd4e3aa61b87adef8d7e0a0a773014f9a9835711",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0003.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "9ad58d8a4e7354fb2b883cb734681a635bc7c7458757687d3dfc76056f63beaf",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0017.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "2f6bf02f69d25dda42c39f8725cc9b8d05c7ef99936cc201d369b8d4c0a965b8",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0002.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "70486e6bf78f8c630545b07375b8fb37b3a5d27636524cfee6de8fe158ba0cb6",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0030.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "80da2956b4cee1000e676fb7a383ba514dfd1460df52fe2c1ef27994a93e6600",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0000.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "dac232456c974e9ddfc57f7f39593d9a1cb770f7a5b1fdac2b1b3caf98129fee",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clean_3830-12531-0031.wav": {
+    "dataset": "Degraded LibriSpeech / clean_ls (Zenodo 8380442)",
+    "condition": "clean",
+    "clipping_intensity_pct": 0,
+    "expected_has_clipping": false,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "f65bd95ef335f4dbc77d7aec9f8ff6af9a29f5a95748c57ac400194c384a9915",
+    "description": "Clean speech reference from LibriSpeech (public domain audiobooks)"
+  },
+  "clip_5pct_27-124992-0006_CLIP_5.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_5pct",
+    "clipping_intensity_pct": 5,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "a3f1057c6c030c332d15bdbb5f43d88d1316e00d6f798ef3118f3472fdfd460f",
+    "description": "Controlled waveform clipping at 5% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_25pct_89-219-0022_CLIP_25.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_25pct",
+    "clipping_intensity_pct": 25,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "8be3a1f1582e4ff5b9bc2ceac7f995bd4b2771784724e4a7cd07f72b60b6a3dd",
+    "description": "Controlled waveform clipping at 25% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_40pct_8580-287364-0022_CLIP_40.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_40pct",
+    "clipping_intensity_pct": 40,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "ef553a42c5e6120067addcd86280d8a0d4d1f1720d5edd0028954a3f90c9e536",
+    "description": "Controlled waveform clipping at 40% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_40pct_5163-39921-0017_CLIP_40.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_40pct",
+    "clipping_intensity_pct": 40,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "09cea0304e8824d4248bd93d44ef3b12a41ccd8f14aaed84d2753c70d462d78a",
+    "description": "Controlled waveform clipping at 40% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_10pct_8975-270782-0047_CLIP_10.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_10pct",
+    "clipping_intensity_pct": 10,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "75515aeaae35636577772c2fc2ad5be494090c2d33dbed4a748c297619753cbf",
+    "description": "Controlled waveform clipping at 10% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_5pct_5390-24512-0011_CLIP_5.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_5pct",
+    "clipping_intensity_pct": 5,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "9d86a9efa59ee3986a7d435f40423af7d135f92b0632fb51b5f1cd5f45dbf150",
+    "description": "Controlled waveform clipping at 5% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_25pct_89-219-0052_CLIP_25.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_25pct",
+    "clipping_intensity_pct": 25,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "60367a791dd8302a77c84f93e1dcf7bd56176dbe7aa071bcb45a68b1c09a17bd",
+    "description": "Controlled waveform clipping at 25% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_40pct_322-124147-0063_CLIP_40.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_40pct",
+    "clipping_intensity_pct": 40,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "fbb81f6031e1caa5eda14ee34f41e05c8fe66c2127c15f71e48bb2ab2968a072",
+    "description": "Controlled waveform clipping at 40% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_60pct_125-121124-0014_CLIP_60.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_60pct",
+    "clipping_intensity_pct": 60,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "df3b20631ac498c96d93cca2ec5fa21a9b7e89eac8f872099e8a34cc09c189ee",
+    "description": "Controlled waveform clipping at 60% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_5pct_7794-295947-0007_CLIP_5.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_5pct",
+    "clipping_intensity_pct": 5,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "ea40b539a47e105f5ce22ad3a93ce56c8098343f4e7be046acb9899e87f9e0eb",
+    "description": "Controlled waveform clipping at 5% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_25pct_1040-133433-0059_CLIP_25.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_25pct",
+    "clipping_intensity_pct": 25,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "c299f3e9ad28c70bfd60417b4719b01ee5b3a9774c58570811b0e84027d1b04a",
+    "description": "Controlled waveform clipping at 25% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_40pct_5867-48852-0084_CLIP_40.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_40pct",
+    "clipping_intensity_pct": 40,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "b2f787dd79a8b9b4330d72f244a8e07d573b42a70ccc882ccfa27d7c9b8a024f",
+    "description": "Controlled waveform clipping at 40% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_10pct_4018-107312-0006_CLIP_10.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_10pct",
+    "clipping_intensity_pct": 10,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "0d56bead6d76ac182cf7acb682bc6ec5c3dddeaa44e370fc3eb9b057f4541319",
+    "description": "Controlled waveform clipping at 10% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_60pct_8975-270782-0034_CLIP_60.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_60pct",
+    "clipping_intensity_pct": 60,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "556c78435ac7df0f64d85aa8663639c46721e14b6548a9d16c40de5a89b78b4f",
+    "description": "Controlled waveform clipping at 60% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_40pct_311-124404-0052_CLIP_40.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_40pct",
+    "clipping_intensity_pct": 40,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "fffb1900ebdb1752ece6f454b417eaafdd9aed10ddecf172b58c193c7aa47be7",
+    "description": "Controlled waveform clipping at 40% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_25pct_5867-48852-0042_CLIP_25.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_25pct",
+    "clipping_intensity_pct": 25,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "8cbdfc9b50bdf13aeee45a639d3006ddbe8ae620968979bd577b73693a46e51e",
+    "description": "Controlled waveform clipping at 25% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_60pct_1963-147036-0011_CLIP_60.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_60pct",
+    "clipping_intensity_pct": 60,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "4a0ca42e418f4db53aeab53650d8997c305b2964bde4ceddd46f1c084ee8b7ff",
+    "description": "Controlled waveform clipping at 60% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_60pct_1235-135884-0025_CLIP_60.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_60pct",
+    "clipping_intensity_pct": 60,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "302d26b5817b39c70f0d66badcd9c97b599f09545b62e41f6b8e7c24343261fa",
+    "description": "Controlled waveform clipping at 60% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_25pct_89-219-0010_CLIP_25.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_25pct",
+    "clipping_intensity_pct": 25,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "57c1dbfd26e83c6809da840dfb6c33fd6ed617f58a6a6e0c4177bfb77185b047",
+    "description": "Controlled waveform clipping at 25% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_10pct_7794-295948-0013_CLIP_10.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_10pct",
+    "clipping_intensity_pct": 10,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "ef8c040c29b47ca1d5e5ae2a2e8ca551e581553f9e4dac541836f10540b076b9",
+    "description": "Controlled waveform clipping at 10% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_60pct_322-124147-0041_CLIP_60.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_60pct",
+    "clipping_intensity_pct": 60,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "be3c9029ec77ad07406840d7facee95f7612aae1d523420d6dea0ec52fe3653c",
+    "description": "Controlled waveform clipping at 60% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_5pct_5163-39921-0023_CLIP_5.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_5pct",
+    "clipping_intensity_pct": 5,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "61830222b61e5361348b97c37a162fac085f35a30226c93b68ccd0ffd83b2a3b",
+    "description": "Controlled waveform clipping at 5% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_10pct_5703-47198-0002_CLIP_10.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_10pct",
+    "clipping_intensity_pct": 10,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "89c34d36d5d0ef0e8abb3a7eb0a96f934209c4d9c62b2b59dea22a55b928a03a",
+    "description": "Controlled waveform clipping at 10% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_5pct_311-124404-0078_CLIP_5.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_5pct",
+    "clipping_intensity_pct": 5,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "fe09932a7eb6aa4f88a69004259fe667a120938f6e86f2f760164489a025350e",
+    "description": "Controlled waveform clipping at 5% of samples (Alessandro Ragano et al.)"
+  },
+  "clip_10pct_3830-12535-0019_CLIP_10.wav": {
+    "dataset": "Degraded LibriSpeech / nomad_ls (Zenodo 8380442)",
+    "condition": "clipping_10pct",
+    "clipping_intensity_pct": 10,
+    "expected_has_clipping": true,
+    "ground_truth_type": "controlled_transform_label",
+    "audio_sha256": "3b82f39ef531f9ba127704c0d203a34f58fd6abe7a5a04b8274efa11b9b104d6",
+    "description": "Controlled waveform clipping at 10% of samples (Alessandro Ragano et al.)"
+  }
+}

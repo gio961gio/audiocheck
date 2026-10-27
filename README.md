@@ -10,6 +10,12 @@
 
 Developed by **Giovanni Antonecchia** (*Music Engineering, Politecnico di Milano*).
 
+> [!NOTE]
+> **Proprietary DSP Engine & Academic Evaluation**  
+> AudioCheck's core DSP algorithms (ITU-R BS.1770-4 48-tap polyphase FIR filter, dual-stage EBU R128 loudness gating, and concurrent batch pipeline) are protected intellectual property.  
+> 
+> You can **test the engine live with your own audio files** via the **[Interactive Web Demo](https://audiocheck.streamlit.app)** or request full source code access for institutional and academic evaluation by contacting [Giovanni Antonecchia](mailto:gio.antonecchia961@gmail.com).
+
 ---
 
 ## 📸 Visual Showcase & Interface
